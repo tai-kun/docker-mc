@@ -28,6 +28,6 @@ jobs:
         run: |
           docker buildx build --no-cache --push \
             --platform ${{ steps.buildx.outputs.platforms }} \
-            --tag ghcr.io/${{ github.actor }}/unpack:latest \
-            --tag ghcr.io/${{ github.actor }}/unpack:${{ github.ref_name }} \
+            --tag ghcr.io/${{ github.actor }}/mc:latest \
+            --tag ghcr.io/${{ github.actor }}/mc:${{ github.ref_name }} \
             .
